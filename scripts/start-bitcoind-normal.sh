@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source config
+source read-config.sh
+if [[ $? != 0 ]]; then exit; fi
 
 echo "Allowing outgoing traffic beyond the LAN..."
 sudo ./firewall-full-outgoing.sh
