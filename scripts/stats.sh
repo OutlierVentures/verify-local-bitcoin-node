@@ -7,10 +7,12 @@ export PROCESS_NAME="bitcoind -daemon"
 export PID_TO_WATCH=`ps ax | grep "$PROCESS_NAME" | grep -v grep | awk '{print $1}'`
 
 if [ ! "$PID_TO_WATCH" ]; then
-	echo "Bitcoind process not found. Did you start it?"
+	echo "Process '${PROCESS_NAME}' not found. Did you start it?"
 	exit 1
 fi
 
+echo "Process ID: ${PID_TO_WATCH}"
+echo
 echo "Disk usage:"
 du -s "${BITCOIND_PATH}"
 echo
