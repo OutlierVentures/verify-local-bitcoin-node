@@ -1,6 +1,6 @@
 # Sync a Bitcoin Core node from a specific source node
 
-Scripts to automate syncing a Bitcoin Core node ("verifier node") from a specific Bitcoin node ("source node") on your LAN. The scripts are for usage on the verifier node.
+Scripts to automate syncing a Bitcoin Core node ("verifier node") from a specific Bitcoin node ("source node") on your LAN. The scripts are to be used on the verifier node. Network traffic on the verifier node is restricted to the LAN, to make sure it doesn't unintentionally get data from other Bitcoin nodes.
 
 Use case: verifying the blockchain data from a preconfigured Bitcoin node like [Casa Node](https://keys.casa/lightning-bitcoin-node/) or [DOJO trusted node by Samourai Wallet](https://samouraiwallet.com/dojo).
 
@@ -64,7 +64,7 @@ Bitcoin Core has a configuration option [`maxuploadtarget`](https://bitcoin.org/
 3. After exactly 10 minutes, some more block data comes in
 4. Go to 2, repeat
 
-On [Casa Node](https://keys.casa/lightning-bitcoin-node/), this value is set to 5000 MB per 24h by default. To work around that, change the `maxuploadtarget` configuration on the source node. If you're unable or unwilling to access the configuration on the source node, restarting it will also work, because the network traffic used is not remembered by `bitcoind` over multiple . Note that you might have to restart it many times.
+On [Casa Node](https://keys.casa/lightning-bitcoin-node/), this value is set to 5000 MB per 24h by default. To work around that, change the `maxuploadtarget` configuration on the source node. If you're unable or unwilling to access the configuration on the source node, restarting it will also work, because the network traffic used is not remembered by `bitcoind` over multiple sessions. Note that you might have to restart it many times.
 
 # FAQ
 
