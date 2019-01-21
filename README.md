@@ -1,6 +1,6 @@
 # Sync a Bitcoin Core node from a specific source node
 
-Scripts to automate syncing a Bitcoin Core node ("verifier node") from a specific Bitcoin Core node ("source node") on your LAN. The scripts are for usage on the verifier node.
+Scripts to automate syncing a Bitcoin Core node ("verifier node") from a specific Bitcoin node ("source node") on your LAN. The scripts are for usage on the verifier node.
 
 Use case: verifying the blockchain data from a preconfigured Bitcoin node like [Casa Node](https://keys.casa/lightning-bitcoin-node/).
 
@@ -10,7 +10,7 @@ Use case: verifying the blockchain data from a preconfigured Bitcoin node like [
 * Bitcoin Core
 * `ufw` firewall
 * Root access to the machine
-* A source node running Bitcoin Core on the same IPv4 LAN subnet as the verifier node
+* A source node on the same IPv4 LAN subnet as the verifier node running some Bitcoin node software
 
 ## Warning
 
