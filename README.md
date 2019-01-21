@@ -2,7 +2,7 @@
 
 Scripts to automate syncing a Bitcoin Core node ("verifier node") from a specific Bitcoin node ("source node") on your LAN. The scripts are for usage on the verifier node.
 
-Use case: verifying the blockchain data from a preconfigured Bitcoin node like [Casa Node](https://keys.casa/lightning-bitcoin-node/).
+Use case: verifying the blockchain data from a preconfigured Bitcoin node like [Casa Node](https://keys.casa/lightning-bitcoin-node/) or [DOJO trusted node by Samourai Wallet](https://samouraiwallet.com/dojo).
 
 ## Dependencies
 
