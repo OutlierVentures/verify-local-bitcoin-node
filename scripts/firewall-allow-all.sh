@@ -1,7 +1,8 @@
 #!/bin/sh
 
-# Allow any outgoing traffic
+# Allow any outgoing and incoming traffic
 ufw default allow outgoing
+ufw default allow incoming
 
 echo
 echo "ufw firewall config now looks like this:"

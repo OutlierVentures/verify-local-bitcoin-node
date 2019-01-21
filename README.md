@@ -43,8 +43,8 @@ Stats and diagnostics:
 
 Helper scripts:
 - `read-config.sh` - Read the config file
-- `firewall-full-outgoing.sh` - Configure the firewall to allow outgoing traffic
-- `firewall-only-lan-outgoing.sh` - Configure the firewall to only allow traffic to the LAN as configured in `config`
+- `firewall-only-lan.sh` - Configure the firewall to only allow traffic to and from the LAN as configured in `config`
+- `firewall-allow-all.sh` - Configure the firewall to allow all incoming and outgoing traffic
 - `install-ubuntu.sh` - Use this to install the dependencies on an Ubuntu machine. Note this installs Bitcoin Core from the [Bitcoin PPA](https://launchpad.net/~bitcoin/+archive/ubuntu/bitcoin), adding a trust dependency in Launchpad and the PPA maintainer.
 
 # Tips and troubleshooting
