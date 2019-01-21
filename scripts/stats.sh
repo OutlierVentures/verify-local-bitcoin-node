@@ -11,11 +11,12 @@ if [ ! "$PID_TO_WATCH" ]; then
 	exit 1
 fi
 
+echo "Disk usage:"
+du -s "${BITCOIND_PATH}"
+echo
+echo "Network traffic:"
+cat /proc/${PID_TO_WATCH}/net/netstat | grep 'IpExt: ' | awk '{ print $8 "\t" $9 }'
+echo
+echo "Network connections:"
+netstat -an | grep 8333
 
-watch -n 10 "cat /proc/$PID_TO_WATCH/net/netstat | grep 'IpExt: ' | awk '{ print \$8 \"\t\" \$9 }'; \
-	echo; \
-	echo Disk usage:; \
-	du -s \"${BITCOIND_PATH}\"; \
-	echo;
-	echo Network connections:; \
-	netstat -an | grep 8333"
