@@ -20,11 +20,13 @@ Use case: verifying the blockchain data from a preconfigured Bitcoin node like [
 
 1. Set up an empty clean folder for `bitcoind` to use.
 2. Create a `config` file. Use `config.example` as a start.
-3. Use `start-bitcoind-only-source-node.sh` to start verifying the source node, restricted network access to LAN.
+3. Use `start-bitcoind-only-source-node.sh` to start verifying the source node, with outgoing network access restricted to the configured LAN subnet.
 4. While syncing, optionally use `watch-stats.sh` and `tail-debug-log.sh` to check progress.
-5. When syncing is done, use `start-bitcoind-normal.sh` to open up outgoing network traffic and run `bitcoind` normally.
+5. When syncing is complete, use `start-bitcoind-normal.sh` to open up outgoing network traffic and run `bitcoind` normally.
 
 ## Scripts
+
+The scripts are found under `scripts/`.
 
 Managing `bitcoind`:
 
