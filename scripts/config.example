@@ -1,0 +1,8 @@
+# Subnet of your LAN, to restrict traffic to
+export LAN_SUBNET=192.168.2.0/24
+
+# LAN IP of the Bitcoin node to sync from
+export SOURCE_NODE_IP=192.168.2.16
+
+# Path where the bitcoind files are stored
+export BITCOIND_PATH=/casa-sync/bitcoind/
